@@ -1,0 +1,89 @@
+canvas {
+  display: block;
+  margin: auto;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+#buttonContainerLogout {
+  display: none;
+}
+#buttonContainerLogin {
+}
+.title {
+  font-size: 2vw;
+}
+#buttonContainer {
+}
+#selectionContainer {
+  display: none;
+  opacity: 0;
+  transition: opacity 2s;
+
+  height: 0%;
+  transition: height 2s;
+}
+
+#aavezonLogo {
+  opacity: 1;
+  transition: opacity 2s;
+  /*   height: 50%;
+  width: 50%;
+  transition: opacity 2s; */
+}
+
+button {
+  width: 200;
+  height: auto;
+  padding: 5px;
+  font-size: 30px;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+  font-family: "Fixedsys Excelsior 3.01";
+}
+.selectionText {
+  color: white;
+  font-size: 20px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.centerColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body {
+  height: auto;
+  opacity: 0;
+  transition: opacity 2s;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    185deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Fixedsys Excelsior 3.01";
+}
+
+@font-face {
+  font-family: "Fixedsys Excelsior 3.01";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Fixedsys Excelsior 3.01"),
+    url("./fonts/FSEX300.woff") format("woff");
+}
+
+.slideContainer {
+  width: 100%;
+  max-width: 500px;
+}
+
+.slider {
+  /*   // -webkit-appearance: none; */
+  width: 100%;
+}

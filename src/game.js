@@ -230,7 +230,9 @@ async function update() {
       this.physics.add.collider(player, dumpster);
       this.physics.add.collider(player, box, moveDepthUpPlayer);
 
-      competitors[user.get("ethAddress")].movementRate = 500;
+      competitors[user.get("ethAddress")].movementRate = 400;
+      competitors[user.get("ethAddress")].setMaxVelocity(400);
+      console.log(competitors[user.get("ethAddress")]);
     }
 
     player.depth = player.y + player.height / 4;

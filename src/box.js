@@ -208,6 +208,8 @@ function createBoxes(bxAmnt) {
       boxes[b].body.height = boxes[b].body.height / 2;
       boxes[b].body.width = boxes[b].body.width;
       boxes[b].scoreValue = 1;
+      boxes[b].setDrag(1200);
+      boxes[b].setMaxVelocity(300);
 
       if (boxes[b].tall) {
         boxes[b].body.offset.y = 40;

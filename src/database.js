@@ -174,9 +174,9 @@ async function updateLeaderBoard() {
         playerstats.set("x", playerObj.x);
         playerstats.set("y", playerObj.y);
         playerstats.set("imageSVG", playerObj.svg);
-
-        if (playerstats.get("boxTotal") < boxShippedCount) {
-          playerstats.set("boxTotal", boxShippedCount);
+        console.log(playerstats.get("boxTotal"), boxShippedTotal);
+        if (playerstats.get("boxTotal") < boxShippedTotal) {
+          playerstats.set("boxTotal", boxShippedTotal);
           console.log("updated Boxtotal");
         }
         console.log("save successsfull");

@@ -44,10 +44,8 @@ async function onEvent() {
       overAllGameActive = false;
       //update leaderboard
 
-      (async () => {
-        await updateLeaderBoard();
-        leaderBoardInfo = await getLeaderBoard();
-      })();
+      await updateLeaderBoard();
+      leaderBoardInfo = await getLeaderBoard();
     }
   } else {
     timerNumber.setText(formatTime(timerCount));
@@ -225,6 +223,7 @@ class GameGUI extends Phaser.Scene {
       timedEvent.remove(false);
       overAllGameActive = false;
       boxShippedCount = 0;
+      boxShippedTotal = boxCountRequired;
       updateShippedBoxCount();
       levelCount++;
       game.scene.start("midgame_one");
@@ -232,7 +231,8 @@ class GameGUI extends Phaser.Scene {
   }
 }
 
-function continueGame() {
+async function continueGame() {
+  await updateLeaderBoard();
   removeAllBoxes();
 
   boxShippedCount = 0;

@@ -15,6 +15,7 @@ var boxCount = 10;
 var maxBoxOnScreen = 400; //absolute max
 var boxCountRequired = 8;
 var boxShippedCount = 0;
+var boxShippedTotal = 0;
 var goal;
 var timer = 0;
 var textCounter = 0;
